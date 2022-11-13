@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>effect</title>
+  <style>
+    *{
+    
+    padding: 0;
+}
+
+ /*CSS Variables
+ */
+ :root{
+    --navbar-height: 50px;
+    --navbar-width: 100%;
+ }
+
+ /* Navbar */
+ #navbar{
+    display: flex;
+    align-items: center;
+ 
+ }
+
+ /*navbar :list style */
+
+  #navbar ul{
+    display: flex;
+ }
+
+ /*navbar list */
+ #navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 6.5%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.6;
+ }
+
+
+ #navbar ul li {
+    /*color: white;*/
+    list-style: none;
+    font-size: 1.1rem;
+ }
+
+#navbar ul li a{
+   color: white;
+   display: block;
+   padding: 10px 22px;
+   border-radius: 20px;
+   text-decoration: none;
+   
+}
+
+#navbar ul li a:hover{
+    color: black;
+  background-color: white;}
+  </style>
+</head>
+
+<body>
+  <nav id="navbar">
+    <ul>
+      <li class="item"><a href="home.html"> HOME</a> </li>
+      <li class="item"><a href="#"> RANKS</a> </li>
+      <li class="item"><a href="/hero"> MENTORS</a> </li>
+      <li class="item"><a href="/register">REGISTER</a></li>
+      <li class="item"> <a href="/login"> LOG IN</a></li>
+    </ul>
+  </nav>
+</body>
+ 
+</html>

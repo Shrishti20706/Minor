@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    body {
+      font-family: arial;
+      color: white;
+      background-color: #1a253f;
+      border: 2px solid white;
+      height: 100vh;
+
+    }
+
+    #d1 {
+      background-color: green;
+      font-size: 20px;
+      color: white;
+    }
+
+    #c {
+      font-size: 22px;
+      padding: 20px;
+      color: white;
+    }
+
+    td {
+      padding: 5px;
+    }
+
+    #date {
+      width: 165px;
+    }
+
+    .boxsize {
+      width: 170px;
+    }
+  </style>
+</head>
+
+<body>
+  <center>
+
+    <form action="/register" method="POST">
+      <table border="0">
+        <tr>
+          <th colspan="2" id="c"><b>Registration Form<b></th>
+        </tr>
+        <tr>
+          <td>User Name</td>
+          <td><input required pattern="[A-Za-z ]{3,20}" id=userid placeholder="Name" name="user_name"></td>
+        </tr>
+        <tr>
+          <td>Email ID</td>
+          <td><input required type="email" id=email placeholder="Email" name="email"></td>
+        </tr>
+        
+        <tr>
+          <td>Contact No</td>
+          <td><input required pattern="[0-9]{10}" id=contact placeholder="Phone No" name="phone"></td>
+        </tr>
+        <tr>
+            <tr>
+          <td>Password</td>
+          <td><input required pattern=".{8,}" placeholder="at least 8 characters" type="password" id=password name="password"></td>
+        </tr>
+         
+        <tr>
+          <td>
+          <td>
+        </tr>
+        <tr>
+          <td>
+          <td>
+        </tr>
+        
+        <tr></tr>
+        <tr></tr>
+        <tr>
+          <td></td>
+          <td><input type="checkbox">I agree all the terms and conditions</td>
+        </tr>
+        <tr></tr>
+        <tr></tr>
+        <tr>
+          <td></td>
+          <td><input type="submit" id="d1" /></td>
+        </tr>
+      </table>
+    </form>
+
+  </center>
+</body>
+
+</html>

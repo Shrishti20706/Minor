@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<style>
+  @-ms-viewport {
+    width: extend-to-zoom;
+    zoom: 1.0;
+  }
+
+  @viewport {
+    zoom: 1.0;
+    width: extend-to-zoom;
+  }
+
+  * {
+    padding: 0;
+    margin: 0;
+    
+  }
+  :root{
+    --navbar-height: 50px;
+    --navbar-width: 100%;
+ }
+
+
+  body {
+
+    overflow-x: hidden;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* CSS Reset */
+
+
+  #home::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;
+    background-size:cover ;
+  }
+
+  #home h1 {
+    color: white;
+    text-align: center;
+    height: 500px;
+  }
+
+  /*utility class*/
+  .h-primary {
+    font-size: 7rem;
+    padding: 0px;
+  }
+
+
+
+
+  .background {
+    background: rgba(0, 0, 0, 0.8) url("https://www.bellevuecollege.edu/wp-content/uploads/sites/144/2020/03/graduation-cap-throw-1024x458.png");
+    background-size: cover;
+    background-blend-mode: darken;
+  }
+.background1 {
+    background: rgba(0, 0, 0, 0.8) url("https://www.ecelliitk.org/esummit/images/portfolio/modals/upstart.jpg");
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;
+    background-size:cover ;
+  }
+  .quotes {
+    text-align: center;
+    color: #ddd;
+    height: 600px;
+  }
+
+
+
+  .colorchange:hover {
+    cursor: pointer;
+    background-color: #0cda5b93;
+
+  }
+
+  .fa {
+    padding: 15px;
+    font-size: 20px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    margin: 20px 5px;
+    border-radius: 60%;
+  }
+
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+
+
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+
+  .fa-youtube {
+    background: #bb0000;
+    color: white;
+  }
+
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+
+
+  #footer {
+    background-color: #111311d2;
+    color: white;
+    width: 100%;
+    height: 100px;
+    font-size: large;
+    text-align: center;
+  }
+
+  .f:hover {
+    color: burlywood;
+  }
+
+  #thought {
+    font-size: 50px;
+    text-shadow: 2px 2px 8px #77ff0091;
+    line-height: 1.8;
+  }
+
+</style>
+
+<body>
+  <!--calling of navbar partial=to use common navbar in login,index and register which is present inside partial-->
+
+
+  <!--//////////////////////////////////////////////////////////////////////////-->
+<section class="background1" id="home">
+    <div class="c">
+        {{>navbar}}
+
+      <br>   
+      <h1 class="h-primary">
+        <br>&nbsp
+      "THE DOER'S."
+    </h1>
+    </div>
+  </section>
+
+  
+
+
+  <main>
+    <section>
+      <br><br><br>
+      <h2>About Us</h2>
+      AITR has always been at the forefront of adopting new technologies. CSIT department @ AITR has three courses those include the emerging areas as recommended by the AICTE committee. As exponential growth in information on various platforms, future engineers must have the expertise in core computer science as well as latest technologies. It requires blending of emerging areas with core subject and therefore AICTE introduced as new branch CSIT.
+
+The courses @ CSIT incorporate both theory and practicals/labs in the emerging areas of AI, ML, IoT, Blockchain and Data Sciences as core subjects and Quantum Computing, Virtual Reality and Cyber Security as Professional Electives. The above emerging areas have been identified by the national level committee as part of National Perspective Plan for Engineering Education and accepted by AICTE. AICTE has also prescribed the model curriculum for the above emerging areas.
+      
+
+      <h3>Our Department</h3>
+The Department of Computer Science and Information Technology was established in the year 2019. The department endeavors to produce confident professionals to meet the current trends in the emerging world of Information Technology. Currently the Department has more than 300 students’ strength and a team of highly qualified, dedicated and experienced faculty members to mould the students to meet challenges in the field of computer science and Information Technology.
+
+Department is having association with Professional Bodies like- CSI, IEEE and ACM.
+
+We have specially designed Labs for Students so that they can learn the latest technologies such as IoT, ALEXA, MACHINE LEARNING, DEEP LEARNING, SALESFORCE, CYBER-SECURITY, ANDROID, and BIG DATA for increasing student understanding of the complexity and ambiguity of empirical work, develop practical skills, increase the understanding of the concepts, cultivate interest in engineering and science learning, improve teamwork abilities and perform Research Activity.
+    </section>
+  </main>
+  <br>
+  
+
+  <!--//////////////////////////////////////////////////////////////////////////-->
+
+
+
+  <section class="background">
+    <div class="quotes">
+      <br>
+      <h id="thought">" BIG THINKING
+        <br>PRECEDES GREAT ACHIEVEMENTS "
+
+      </h>
+      <br><br><br><br>
+      <h2>Follow Us</h2>
+      <a href="https://www.facebook.com/AcropolisCollegeIndore/" class="fa fa-facebook  colorchange"
+        target="_blank"></a>
+      <a href="https://www.linkedin.com/school/acropolis-institutions/" class="fa fa-linkedin  colorchange"
+        target="_blank"></a>
+      <a href="https://www.youtube.com/channel/UC60LP9OIuv-HWXIVdolUeRQ" class="fa fa-youtube   colorchange"
+        target="_blank"></a>
+      <a href="https://twitter.com/AcropolisIndia" class="fa fa-twitter colorchange" target="_blank"></a>
+    </div>
+  </section>
+
+  <table id="footer">
+    <tr>
+      <td class="f">ABOUT</td>
+      <td class="f">CELL</td>
+      <td class="f">OUR GROUP'S SITES </td>
+      <td class="f">ACTIVITIES</td>
+    </tr>
+    <tr>
+      <td colspan="4" class="f">Copyright © CSIT Department</td>
+    </tr>
+  </table>
+
+</body>
+
+</html>

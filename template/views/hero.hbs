@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero</title>
+    <style>
+        /* CSS Reset */
+*{
+    
+    padding: 0;
+}
+
+ /*CSS Variables
+ */
+ :root{
+    --navbar-height: 50px;
+    --navbar-width: 100%;
+ }
+
+ /* Navbar */
+ #navbar{
+    display: flex;
+    align-items: center;
+ 
+ }
+
+ /*navbar :list style */
+
+  #navbar ul{
+    display: flex;
+ }
+
+ /*navbar list */
+ #navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 12%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.6;
+ }
+
+
+ #navbar ul li {
+    /*color: white;*/
+    list-style: none;
+    font-size: 1.1rem;
+ }
+
+#navbar ul li a{
+   color: white;
+   display: block;
+   padding: 3px 22px;
+   border-radius: 20px;
+   text-decoration: none;
+   
+}
+
+#navbar ul li a:hover{
+    color: black;
+  background-color: white;}
+
+/* home section */
+
+#home{
+    display: flex;
+    padding: 3px 200px;
+    height: 350px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before{
+    content: "";
+    background: url(/mentor2changed.jpg) no-repeat center center/cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;
+}
+#home h1{
+    color: white;
+    text-align: center;
+}
+/*utility class*/
+.h-primary{
+    font-size: 2.8rem;
+    padding: 12px;
+}
+    </style>
+</head>
+<body>
+   <nav id="navbar">
+        <!-- <div>
+             <img src="mentor 1.jpg" alt="mentors"  height="60%" >
+         </div>
+        -->
+         <ul>
+            <li class="item" > <a href="home.html"> HOME</a> </li>
+            <li class="'item"> <a href="#"> RANKS</a> </li>
+            <li class="item"> <a href="hero.html"> MENTORS</a> </li>
+            <li class="item"> <a href="minorLOGIN.html"> LOG IN</a></li>
+         </ul>
+   </nav>
+
+   <section id="home">
+    <h1 class="h-primary">
+        "Every great achiever is inspired by a great mentor."
+    </h1>
+   </section>
+</body>
+</html>

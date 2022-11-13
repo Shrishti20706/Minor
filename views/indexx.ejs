@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+      /* Change your font family */
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+    }
+
+    #mytable {
+      border-collapse: collapse;
+      margin: 25px 0;
+      font-size: 0.9em;
+      min-width: 400px;
+      border-radius: 5px 5px 0 0;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+
+    #mytable thead tr {
+      background-color: #1a253f;
+      ;
+      color: #ffffff;
+      text-align: left;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    #mytable th,
+    #mytable td {
+      padding: 12px 15px;
+    }
+
+    #mytable tbody tr {
+      border-bottom: 1px solid #dddddd;
+    }
+
+    #mytable tbody tr:nth-of-type(even) {
+      background-color: #f3f3f3;
+    }
+
+    #mytable tbody tr:last-of-type {
+      border-bottom: 2px solid #1a253f;
+      ;
+    }
+
+    th i {
+      margin-left: 1px;
+      visibility: hidden;
+    }
+
+    th .active {
+      visibility: visible;
+    }
+
+    #myinput {
+      text-align: center;
+      height: 35px;
+      width: 500px;
+      margin: 50px;
+    }
+
+    .table-sortable th {
+      cursor: pointer;
+    }
+
+    .table-sortable .th-sort-asc::after {
+      content: "\25b4";
+    }
+
+    .table-sortable .th-sort-desc::after {
+      content: "\25be";
+    }
+
+    .table-sortable .th-sort-asc::after,
+    .table-sortable .th-sort-desc::after {
+      margin-left: 5px;
+    }
+
+    .table-sortable .th-sort-asc,
+    .table-sortable .th-sort-desc {
+      background: rgba(0, 0, 0, 0.1);
+    }
+
+    .viewbutton {
+      background-color: rgb(0, 102, 255);
+      color: white;
+      height: 40px;
+      padding: 10px;
+      border-radius: 2px;
+    }
+
+    .colorchange:hover {
+      cursor: pointer;
+      background-color: #0cda5b93;
+
+    }
+    #more {display: none;}
+  </style>
+
+</head>
+
+<body>
+
+
+  <div class="container"><input type="text" name="" id="myinput" placeholder="Search by Username" onkeyup="searchfun()">
+    <br>
+  </div>
+  <div class="container">
+    <table class="table-sortable" id="mytable">
+      <thead>
+        <tr>
+          <th scope="col" type="string"><i class="fa-solid "></i>ID</th>
+          <th scope="col" type="string"><i class="fa-solid "></i>user_name</th>
+          <th scope="col" type="string"><i class="fa-solid "></i>email</th>
+          <th scope="col" type="string"><i class="fa-solid "></i>phone</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <%registersList.forEach(register=> {%>
+          <tr>
+            <th scope="row">
+              <%=register._id %>
+            </th>
+            <td>
+              <%=register.user_name %>
+            </td>
+            <td>
+              <%=register.email %>
+            </td>
+            <td>
+              <%=register.phone %>
+            </td>
+            <td>
+              <button><a href="/portfolio" color="white">
+                
+                
+                view
+            </a></button>
+              
+            </td>
+            
+          </tr>
+           
+
+          <%})%>
+
+      </tbody>
+    </table>
+  </div>
+</body>
+<script>
+
+
+
+
+
+  function searchfun() {
+
+    var input, filter, table, tr, td, i, txtvalue;
+
+    input = document.getElementById("myinput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("mytable");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[1];
+      if (td) {
+        txtvalue = td.textContent || td.innerText;
+        if (txtvalue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        }
+        else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  }
+
+  //Show resume function
+  function showResume() {
+            window.open(
+            "https://www.geeksforgeeks.org", "_blank");
+        }
+
+  // Sort table
+
+  function sortTableByColumn(table, column, asc = true) {
+    const dirModifier = asc ? 1 : -1;
+    const tBody = table.tBodies[0];
+    const rows = Array.from(tBody.querySelectorAll("tr"));
+
+    // Sort each row
+    const sortedRows = rows.sort((a, b) => {
+      const aColText = a.querySelector(`td:nth-child(${column + 1})`).textContent.trim();
+      const bColText = b.querySelector(`td:nth-child(${column + 1})`).textContent.trim();
+
+      return aColText > bColText ? (1 * dirModifier) : (-1 * dirModifier);
+    });
+
+    // Remove all existing TRs from the table
+    while (tBody.firstChild) {
+      tBody.removeChild(tBody.firstChild);
+    }
+
+    // Re-add the newly sorted rows
+    tBody.append(...sortedRows);
+
+    // Remember how the column is currently sorted
+    table.querySelectorAll("th").forEach(th => th.classList.remove("th-sort-asc", "th-sort-desc"));
+    table.querySelector(`th:nth-child(${column + 1})`).classList.toggle("th-sort-asc", asc);
+    table.querySelector(`th:nth-child(${column + 1})`).classList.toggle("th-sort-desc", !asc);
+  }
+
+  document.querySelectorAll(".table-sortable th").forEach(headerCell => {
+    headerCell.addEventListener("click", () => {
+      const tableElement = headerCell.parentElement.parentElement.parentElement;
+      const headerIndex = Array.prototype.indexOf.call(headerCell.parentElement.children, headerCell);
+      const currentIsAscending = headerCell.classList.contains("th-sort-asc");
+
+      sortTableByColumn(tableElement, headerIndex, !currentIsAscending);
+    });
+  });
+
+</script>
+
+</html>

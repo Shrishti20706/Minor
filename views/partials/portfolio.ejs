@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+  rel="stylesheet"
+  href="https://unicons.iconscout.com/release/v2.1.3/css/unicons.css"
+/>
+    <link rel="stylesheeet" href="./plugins/headline/headline.css">
+    <title>portfolio</title>
+    <!--<link rel="stylesheet" href="portfolio.css">-->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Ubuntu&display=swap');
+
+/* colors */
+:root{
+    --primary: #1a235f;
+    --dark:#151A33;
+    --secondary:#2b55cc;
+    --info: #4d79f6;
+    --primary: #1a253f;
+--ternary: #848db3;
+--pure: #eff2f9;
+--fade: #7081b9;
+--mild: #8997bd;
+--footer: #212A4A;
+--black: #060b1b;
+--twitter: #4ac7ec;
+--dribbble : #ff5da0;
+--success: #1ecab8;
+--danger: #f1646c;
+--dark-blue: #28365f;
+--dark--grey: #171f33;
+--yellow:#f3c74d;
+
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'IBM Plex Sans',sans-serif;
+    background:var(--dark) ;
+    -webkit-font-smoothing:antialised ;
+    height: 5000px;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    line-height: 1;
+}
+
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+nav{
+    background:var(--primary);
+    padding: 1.6rem 0;
+
+}
+
+nav .inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .inner .logo{
+    text-transform: uppercase;
+    color: white;
+    font-size: 18px;
+    letter-spacing:1px ;
+    font-weight: 500;
+}
+
+nav .inner .logo i {
+    color: var(--info);
+
+}
+
+nav .inner button a{
+    background: var(--secondary);
+    border: none;
+    padding: 0.6rem 1rem;
+    color: white;
+    font-size: 14px;
+    border-radius: 4px;
+}
+section.profile{
+     background: var(--black);
+     display: flex;
+     align-items: center;
+     padding: 3rem;
+     padding: 60px;
+     clip-path: polygon( 0 0, 100% 0,100% 80%, 25% 100%, 0 80%);
+     padding-bottom: 4rem;
+}
+
+section.profile .left{
+      flex: 2;
+      display: flex;
+      align-items: center;
+} 
+
+section.profile .right{
+    flex: 1;
+}
+
+section.profile .left h2{
+    color:var(--fade) ;
+    font-size: 24px;
+    font-weight: 600 ;
+    margin-bottom: 1rem;
+}
+section.profile .left p{
+    color: var(--mild);
+    font-size: 14px;
+
+}
+section.profile .left .cd-headline.loading-bar .cd-words-wrapper::after{
+    background: linear-gradient(to right,var(--secondary),var(--success));
+
+}
+ 
+section.profile .left .p b{
+    padding-bottom: 1rem;
+    font-weight: 400;
+}
+section.profile .left img{
+    border-radius: 55%;
+    object-fit: cover;
+}
+
+section.profile .left .avatar_block{
+    position: relative;
+    margin-right: 2rem;
+
+}
+
+section.profile .left .avatar_block span{
+    position: absolute;
+    right: 4px;
+    bottom: 4px;
+    background: var(--info);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--pure);
+    box-shadow: 0px 0px 20px 0px rgba( 32, 41, 54, 0.05);
+
+}
+
+/* contact */
+
+section.profile .right ul.contact{
+    list-style-type: none;
+    margin-bottom: 1.6rem;
+
+}
+
+section.profile .right ul.contact li{
+    color: var(--ternary);
+    margin-bottom: 0.7rem;
+    font-size: 14px;
+}
+
+/*icons left for now*/
+
+section.profile .right ul.contact li i{
+    font-size: 18px;
+    margin-right: 0.3rem;
+
+}
+
+section.profile .right ul.socials {
+    display: flex;
+    align-items: center;
+
+}
+
+section.profile .right ul.socials li a{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    color: var(--pure);
+}
+
+/* ICONS */
+
+
+section.profile .left .animation span:nth-child(2){
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right ,#e2e0e9,#a9cbfa);
+    animation: A1 1s linear infinite;
+}
+
+/* hold for now */
+
+/*l2*/
+
+.section_heading{
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--pure);
+    margin-bottom: 3rem;
+    text-shadow: 0 0 1px rgba(40, 50, 95, 0.1);
+    position: relative;
+}
+
+section{
+    padding: 3rem;
+
+}
+
+main{
+    background: var(--primary);
+}
+
+.section_heading::after{
+    content: '';
+    height: 3px;
+    width: 80px;
+    position: absolute;
+    top: 28px;
+    left: 0;
+    border: 2px dotted var(--danger);
+}
+
+section.about .content{
+    display: grid;
+    grid-template-columns:  1fr 1fr;
+    grid-gap: 16rem;
+
+}
+
+section.about .content h2{
+    color: var(--info);
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+    margin-bottom: 1.6rem;
+
+}
+
+section.about .content p{
+    color: var(--ternary);
+    font-size: 14px;
+    line-height: 1.6rem;
+    letter-spacing: 0.6px;
+    margin-bottom: 1rem;
+
+}
+section.about .content .left button{
+    background-color: rgba(77,121,246,0.1);
+    color: var(--info);
+    padding: 4px 8px;
+    font-size: 12px;
+    border: none;
+    line-height: 24px;
+    outline: none;
+    cursor: pointer;
+}
+
+section.about .content .right p{
+    line-height: 1.6;
+    font-size: 14px;
+    color: var(--ternary);
+    letter-spacing: 0.1px;
+    margin-bottom: 1rem;
+}
+
+section.about .content .right p span:nth-child(1)
+{
+    width: 130px;
+    float: left;
+    font-weight: 500;
+    padding-right: 10px;
+    display: block;
+    position: relative;
+}
+
+section.about .content .right p span:nth-child(2)
+{
+    padding-left: 150px;
+    display: block;
+}
+
+section.about .content .right p span:nth-child(1)::after{
+    content: ':';
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+section.skills .content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+section.skills .content .left{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+section.skills .content .left .heading{
+    margin-bottom: 2rem;
+}
+
+section.skills .content .left .heading h5{
+    font-size: 16px;
+    margin-top: 0.5rem;
+    color: var(--mild);
+}
+
+section.skills .content .left p{
+    font-size: 14px;
+    color: var(--ternary);
+    line-height: 1.7;
+}
+
+section.skills .content .left p.center{
+    color: var(--fade);
+}
+
+section.skills .content .left .item{
+    margin-bottom: 2.6rem;
+    margin-left: 15px;
+    position: relative;
+}
+
+section.skills .content .left .timeline_wrapper{
+    border-left: 2px dotted var(--dark-blue);
+
+}
+
+section.skills .content .left .item::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    border: 2px solid var(--info);
+    border-radius: 50%;
+    margin-left: -21px;
+}
+
+section.skills .skills_wrapper .skills_box h5{
+     color: var(--ternary);
+     font-size: 14px;
+     text-transform: uppercase;
+     font-weight: 500;
+     margin-bottom: 1rem;
+}
+
+section.skills .skills_wrapper .skills_box{
+    margin-bottom: 4rem;
+}
+
+section.skills .skills_wrapper .skills_box .progress-wrapper{
+    background: #20294a;
+    height: 6px;
+    width: 100%;
+    border: 2px solid #1a253f;
+    box-shadow: 0px 0px 1px 0.25px #4d79f6;
+    border-radius: 10px;
+    
+
+}
+
+section.skills .skills_wrapper .skills_box .progress-wrapper .progress-bar{
+    display: block;
+    height: 100%;
+    background: var(--info);
+    width: 50%;
+    position: relative;
+    transition: all 3s ease-in-out;
+}
+
+section.skills .skills_wrapper .skills_box .progress-wrapper .progress-bar .tooltip{
+    
+    position: absolute;
+    right: -15px;
+    top: -30px;
+    margin-bottom: 10px;
+    color: var(--ternary);
+    font-size: 16px;
+    text-transform: uppercase;
+
+}
+
+section.counter_wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background: var(--dark--grey);
+
+}
+
+section.counter_wrapper > div {
+    display: flex;
+    align-items: center;
+}
+
+section.counter_wrapper > div i {
+    font-size: 42px;
+    margin-right: 5px;
+}
+section.counter_wrapper > div:nth-child(1) i{
+    color: var(--yellow);
+}
+section.counter_wrapper > div:nth-child(2) i{
+    color: var(--success);
+}
+section.counter_wrapper > div:nth-child(3) i{
+    color: var(--dribbble);
+}
+
+section.counter_wrapper > div h3{
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--fade);
+    margin-bottom: 8px;
+}
+
+section.counter_wrapper > div h4{
+    font-size: 14px;
+    color: var(--fade);
+}
+
+
+
+
+
+    </style>
+</head>
+<body>
+    
+    <!--<%registersList(register => {%>-->
+   <nav>
+    <div class="container inner">
+        <div class="logo">
+           <i class="uil uil-cell"></i>
+           NEXTGEN CV
+        </div>
+        <div>
+            <button>
+                <i class="uil uil-print"></i>
+                <a href="/editfrom" color="white">
+                    <!-- <%- include("partials/editfrom"); -%>-->
+                    
+                    Edit
+                </a>
+                
+            </button>
+        </div>
+    </div>
+
+   </nav>
+   <main class="container">
+    <section class="profile" id="profile_ripple">
+            <div class="left">
+                <div class="avatar_block">
+                    <img src="portfolio.jpg" alt="photo" height="128px" width="120px">
+                    <span>
+                        <i class="uil uil-comments-dots"></i>
+                    </span>
+                </div>
+                
+                   
+                      
+                
+                <div class="animation" id="mytable">
+                    <h2><tr><%=register.user_name %></tr></h2>
+                    <p class="cd-headline loading bar">
+                        <span class="cd-word-wrapper">
+                            <b class="is-visible">skill 1</b>
+                            <b>skill 2</b>
+                            <b>skill 3</b>
+
+                        </span>
+                        <span ></span>
+                    </p>
+                </div>
+            </div>
+            <div class="right">
+                <ul class="contact">
+                    <li>
+                        <i class="uil uil-phone-volume"></i>
+                        <strong>phone:</strong> <%=register.phone %>
+                    </li>
+                    <li>
+                        <i class="uil uil-envelope"></i>
+                        <strong>Email:</strong><%=register.email %>
+                    </li>
+                </ul>
+                <ul class="socials">
+                    <li>
+                        <a href="#">
+                            <i class="uil uil-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="uil uil-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="uil uil-linkedin"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+    </section>
+
+    <section class="about">
+        <h1 class="section_heading">About Us</h1>
+        <div class="content">
+            <div class="left">
+                <h2>I am <%=register.user_name %></h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae laudantium saepe adipisci. Corporis.</p>
+                <button>Learn More</button>
+            </div>
+            <div class="right">
+                <p>
+                    <span>Name</span>
+                    <span><%=register.user_name %></span>
+                </p>
+                <p>
+                    <span>Date Of Birth</span>
+                    <span>5 Sep 2018</span>
+                </p>
+                <p>
+                    <span>Spoken Language</span>
+                    <span>English,Hindi,Tamil</span>
+                </p>
+                <p>
+                    <span>Nationality</span>
+                    <span>Indian</span>
+                </p>
+                <p>
+                    <span>Intrest</span>
+                    <span>Music,Literature,Culnary</span>
+                </p>
+                </div>
+        </div>
+    </section>
+
+    <section class="skills">
+        <h1 class="section_heading">Eduction And skills</h1>
+         <div class="content">
+            <div class="left">
+                <div class="inner_left">
+                    <div class="heading">
+                        <h5>Education</h5>
+                    </div>
+    
+                    <div class="timeline_wrapper">
+                        <div class="item">
+                            <p>10th Standard</p>
+                            <p class="center">Lorem School</p>
+                            <p>88%</p>
+                        </div>
+                        <div class="item">
+                            <p>12th Standard</p>
+                            <p class="center">Lorem School</p>
+                            <p>98%</p>
+                        </div>
+                        <div class="item">
+                            <p>Bachelor's</p>
+                            <p class="center">Lorem college</p>
+                            <p>SGPA: 8.5</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="inner_right">
+                    <div class="heading">
+                        <h5>Ranks</h5>
+                    </div>
+    
+               <div class="timeline_wrapper">
+                <div class="item">
+                    <p>codechef</p>
+                    <p class="center"> <a href="#">Uername</a></p>
+                    <p>1565</p>
+                </div>
+                <div class="item">
+                    <p>LeetCode</p>
+                    <p class="center"><a href="#">Username</a></p>
+                    <p>1400</p>
+                </div>
+                <div class="item">
+                    <p>Coding Ninja's</p>
+                    <p class="center"><a href="#"> Username</a></p>
+                    <p>streak: 71 days</p>
+                </div>
+               </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="skills_wrapper">
+                    <div class="skills_box">
+                        <h5> Web Tech.</h5>
+                        <div class="progress-wrapper">
+                            <span data-percent="78" class="progress-bar">
+                                <span class="tooltip">78%</span>
+                            </span>
+
+                        </div>
+                    </div>
+
+                    <div class="skills_box">
+                        <h5>Android development</h5>
+                        <div class="progress-wrapper">
+                            <span data-percent="40" class="progress-bar">
+                                <span class="tooltip">78%</span>
+                            </span>
+
+                        </div>
+                    </div>
+
+                    <div class="skills_box">
+                        <h5>A.I & data science</h5>
+                        <div class="progress-wrapper">
+                            <span data-percent="90" class="progress-bar">
+                                <span class="tooltip">78%</span>
+                            </span>
+
+                        </div>
+                    </div>
+
+                    <div class="skills_box">
+                        <h5>Cyber Security & Networking </h5>
+                        <div class="progress-wrapper">
+                            <span data-percent="80" class="progress-bar">
+                                <span class="tooltip">78%</span>
+                            </span>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+    </section>
+       <section class="counter_wrapper">
+               <div>
+                <div>
+                    <i class="uil uil-cell"></i>
+                </div>
+                <div>
+                    <h3>
+                        <span class="counter" data-count="20">20</span>+
+                        <h4>Completed Projects</h4>
+                    </h3>
+                </div>
+               </div>
+
+
+               <div>
+                <div>
+                    <i class="uil uil-star"></i>
+                </div>
+                <div>
+                    <h3>
+                        <span class="counter" data-count="143">143</span>+
+                        <h4>Total Stars</h4>
+                    </h3>
+                </div>
+               </div>
+
+
+               <div>
+                <div>
+                    <i class="uil uil-fire"></i>
+                </div>
+                <div>
+                    <h3>
+                        <span class="counter" data-count="39">39</span>+
+                        <h4>streak</h4>
+                    </h3>
+                </div>
+               </div>
+               
+       </section>
+   </main>
+   <script src="https://code.jquery.com/jquery-3.6.1.min.js" ></script>   
+   <!--<script src="./plugins/headline/headline.js"></script>
+   <script src=".plugins/ripple.js"></script>-->
+   <script src="resume.js"></script>
+   
+   <!--<%})%>-->
+</body>
+</html>
